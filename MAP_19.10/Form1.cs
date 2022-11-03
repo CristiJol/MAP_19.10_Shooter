@@ -59,17 +59,21 @@ namespace MAP_19._10
 
             }
         }
-        private static System.Timers.Timer timer;
+        
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             
             Engine.Shoot(new Point(e.X, e.Y));
+            pictureBox1.Cursor = new Cursor(bm.GetHicon());
+
+        }
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
             Bitmap bm1 = new Bitmap(new Bitmap("../../Images/Sword2.png"), 80, 160);
             pictureBox1.Cursor=new Cursor(bm1.GetHicon());
             
-
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
            Engine.Tick();
@@ -80,6 +84,6 @@ namespace MAP_19._10
 
         }
 
-       
+        
     }
 }

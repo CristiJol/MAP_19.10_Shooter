@@ -35,7 +35,6 @@
             this.TimeLabel = new System.Windows.Forms.Label();
             this.HealthLabel = new System.Windows.Forms.Label();
             this.WaveLabel = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +53,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // timer1
             // 
@@ -127,7 +127,6 @@
         public System.Windows.Forms.Label TimeLabel;
         public System.Windows.Forms.Label HealthLabel;
         public System.Windows.Forms.Label WaveLabel;
-        private System.Windows.Forms.Timer timer2;
     }
 }
 
